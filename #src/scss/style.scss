@@ -1,0 +1,203 @@
+@import "reset.scss";
+@import "fonts.scss";
+
+body {
+    font-size: 15px;
+    font-family: Helvetica;
+    color: #fff;
+}
+
+.wrapper {
+    width: 1550px;
+    margin: 0 auto;
+}
+
+.long-line {
+    width: 100%;
+    height: 10px;
+    background-color: #022a65;
+    margin-bottom: 100px;
+    position: relative;
+}
+
+/* INTRO STYLES */
+
+.intro {
+    margin-bottom: 18px;
+    background: url("../img/intro-bg.png") 0 0/100% auto no-repeat;
+    height: 1080px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__content {
+        height: 400px;
+        max-width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__pre-title {
+        font-family: "Teko";
+        font-weight: 500;
+        font-size: 91px;
+        letter-spacing: 5px;
+        text-shadow: 1px 1px 15px #444, -1px -1px 15px #444;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    &__title {
+        font-family: "Mutiara";
+        font-size: 170px;
+        text-shadow: 13px 13px #bd0f35;
+        line-height: 90px;
+        margin-bottom: 80px;
+        letter-spacing: 5px;
+    }
+    &__text {
+        font-family: "Proxima Nova";
+        font-weight: 700;
+        font-size: 41px;
+        text-shadow: 1px 1px 15px #000, -1px -1px 15px #000;
+        letter-spacing: 3px;
+    }
+}
+
+/* INTRO STYLES END */
+
+/* BENEFITS STYLES */
+
+.benefits {
+    &__title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    &__title-image {
+    }
+    &__title-image-item {
+    }
+
+    &__title-subtitle {
+        color: #e5b783;
+        font-family: "Teko";
+        font-weight: 500;
+        font-size: 78px;
+        letter-spacing: 9px;
+        line-height: 70px;
+    }
+    &__title-title {
+        color: #bd0f35;
+        font-family: "Teko";
+        font-weight: 700;
+        font-size: 80px;
+        letter-spacing: 9px;
+    }
+
+    &__title-stars {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    &__title-star-sm {
+        transform: scale(0.65);
+    }
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    &__card {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 100px;
+        justify-content: space-evenly;
+    }
+    &__card-photo-1 {
+        margin-left: 10px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:before {
+            content: "";
+            background: url("../img/ring-left.png") 50% no-repeat;
+            width: 663px;
+            height: 663px;
+            position: absolute;
+            z-index: 1;
+        }
+        &:after {
+            content: "";
+            width: 10px;
+            height: 80px;
+            background-color: #022a65;
+            position: absolute;
+            top: 105%;
+        }
+    }
+
+    &__card-photo-2 {
+        margin-left: 10px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:after {
+            content: "";
+            background: url("../img/ring-right.png") 50% no-repeat;
+            width: 663px;
+            height: 663px;
+            position: absolute;
+            z-index: 1;
+        }
+        &:before {
+            content: "";
+            width: 10px;
+            height: 90px;
+            background-color: #022a65;
+            position: absolute;
+            bottom: 102%;
+        }
+    }
+
+    &__card-photo-item-1 {
+        border-radius: 50%;
+        position: relative;
+        z-index: 2;
+        left: 5px;
+        top: 5px;
+    }
+    &__card-photo-item-2 {
+        border-radius: 50%;
+        position: relative;
+        z-index: 2;
+        right: 5px;
+        top: 5px;
+    }
+
+    &__card-text {
+        max-width: 52%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__card-title {
+        font-family: "Teko";
+        font-weight: 500;
+        color: #bd0f35;
+        font-size: 45px;
+        letter-spacing: 5px;
+        margin-bottom: 8px;
+    }
+    &__card-desc {
+        font-family: "Proxima Nova";
+        font-weight: 500;
+        color: black;
+        font-size: 28px;
+        margin-bottom: 30px;
+        line-height: 35px;
+    }
+}
+
+/* BENEFITS STYLES END */
