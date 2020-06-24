@@ -1,15 +1,26 @@
 @import "reset.scss";
 @import "fonts.scss";
 
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
 body {
     font-size: 15px;
     font-family: Helvetica;
     color: #fff;
+    font-style: normal;
 }
 
 .wrapper {
-    width: 1550px;
+    max-width: 1550px;
     margin: 0 auto;
+    padding: 0 30px;
 }
 
 .long-line {
@@ -19,12 +30,18 @@ body {
     margin-bottom: 100px;
     position: relative;
 }
-
+img {
+    max-width: 100%;
+    height: auto;
+}
+main {
+}
 /* INTRO STYLES */
 
 .intro {
     margin-bottom: 18px;
-    background: url("../img/intro-bg.png") 0 0/100% auto no-repeat;
+    //background: url("../img/intro-bg.png") 0 0/100% auto no-repeat;
+    background: url("../img/intro-bg.png") no-repeat;
     height: 1080px;
     display: flex;
     align-items: center;
@@ -35,6 +52,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 0 auto;
     }
     &__pre-title {
         font-family: "Teko";
@@ -69,7 +87,7 @@ body {
 .benefits {
     &__title {
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
     }
     &__title-image {
     }
@@ -112,7 +130,10 @@ body {
         flex-wrap: wrap;
         align-items: center;
         margin-bottom: 100px;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        &:last-child {
+            align-items: flex-start;
+        }
     }
     &__card-photo-1 {
         margin-left: 10px;
@@ -181,6 +202,9 @@ body {
         max-width: 52%;
         display: flex;
         flex-direction: column;
+        &:first-child {
+            margin-top: 40px;
+        }
     }
     &__card-title {
         font-family: "Teko";
@@ -201,3 +225,170 @@ body {
 }
 
 /* BENEFITS STYLES END */
+
+/* SCHEDULE STYLES */
+
+.schedule {
+    margin-bottom: 75px;
+    &-wrap {
+        width: 100%;
+        background: url("../img/bottom-bg.jpg") no-repeat;
+        height: 1250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__bg {
+        width: 82%;
+        max-height: 100%;
+        background-color: rgba($color: #ffffff, $alpha: 0.6);
+    }
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 60px;
+    }
+    &__stars {
+        margin-top: 10px;
+    }
+    &__star {
+        &:last-child {
+            padding-left: 10px;
+        }
+    }
+
+    &__title-text {
+        font-family: "Mutiara";
+        font-size: 80px;
+        text-shadow: 1px 1px 6px #666, -1px -1px 6px #666;
+        margin: 0 12px 0 20px;
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: 40% 40%;
+        justify-content: center;
+        column-gap: 8.5%;
+        row-gap: 10%;
+    }
+    &__card {
+    }
+    &__card-title {
+        font-family: "Teko";
+        color: #bd0f35;
+        font-size: 45px;
+        font-weight: 500;
+        letter-spacing: 5px;
+    }
+    &__card-text {
+        font-family: "Proxima Nova";
+        color: black;
+        font-size: 28px;
+        margin-bottom: 30px;
+        line-height: 35px;
+    }
+    &__cost {
+        color: #022a65;
+        font-size: 33px;
+        font-weight: 700;
+    }
+    &__button {
+        margin-top: 100px;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    &__link {
+        padding: 15px 60px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-size: 30px;
+        font-family: "Proxima Nova";
+        letter-spacing: 2px;
+        font-weight: 800;
+        background-color: #bd0f35;
+        color: #fff;
+    }
+    &__today {
+        font-weight: 400;
+    }
+}
+
+/* SCHEDULE STYLES END */
+
+/* FOOTER STYLES */
+
+.footer {
+    &__wrap {
+        width: 71.5%;
+        margin: 0 auto;
+    }
+    &__coaches {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        align-items: center;
+        &:after {
+            content: "";
+            width: 10px;
+            height: 30%;
+            background-color: #022a65;
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &__ring {
+        padding-bottom: 100px;
+        position: relative;
+        &:after {
+            content: "";
+            width: 140%;
+            height: 10px;
+            background-color: #022a65;
+            position: absolute;
+            top: 92.5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &__ring-item {
+        height: 550px;
+        width: auto;
+    }
+    &__coach {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__textbox {
+        font-family: "Teko";
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    &__coach-name {
+        font-size: 70px;
+        font-weight: 500;
+        letter-spacing: 3px;
+        color: #bd0f35;
+    }
+    &__last-name {
+        font-size: 105px;
+        font-weight: 700;
+        color: #bd0f35;
+    }
+    &__coach-rang {
+        font-size: 37px;
+        letter-spacing: 3px;
+        color: #022a65;
+    }
+}
+
+/* FOOTER STYLES END */
